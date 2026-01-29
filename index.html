@@ -16,43 +16,64 @@
             background-color: #FFFFFF;
         }
         .container {
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 20px;
         }
+
+        /* Faixa preta do topo */
         .header {
             background-color: #000000;
             color: #FFFFFF;
             text-align: center;
-            padding: 30px 20px;
+            padding: 20px 20px;
         }
         .header h1 {
+            font-family: 'Roboto', Arial, sans-serif;
             font-size: 24px;
             font-weight: 600;
             line-height: 1.4;
+            margin: 0;
         }
         .header u {
             text-decoration: underline;
         }
+
+        /* Conteúdo principal branco */
         .content {
             padding: 20px;
             text-align: center;
+            background-color: #FFFFFF;
         }
+
+        .spacer-20 {
+            height: 20px;
+        }
+
+        /* Título vermelho "VOCÊ FOI SELECIONADA!" */
         .title-red {
             color: #FF0000;
+            font-family: 'Roboto', Arial, sans-serif;
             font-size: 32px;
             font-weight: 900;
-            margin: 20px 0;
+            margin: 0 0 15px 0;
+            text-align: center;
         }
+
+        /* Blocos de texto (h5) */
         .text-block {
+            font-family: 'Roboto', Arial, sans-serif;
             font-size: 19px;
             font-weight: 600;
-            margin: 15px 0;
+            color: #000000;
+            margin: 15px auto;
             line-height: 1.5;
+            text-align: center;
+            max-width: 900px;
         }
+
+        /* Destaques */
         .highlight-green {
             background-color: #6aee00;
-            padding: 2px 5px;
         }
         .highlight-red {
             color: #ff0000;
@@ -60,6 +81,8 @@
         .highlight-green-text {
             color: #00CF37;
         }
+
+        /* Botão verde */
         .button {
             display: inline-block;
             background-color: #00DD00;
@@ -69,21 +92,59 @@
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
-            margin: 25px 0;
+            margin: 25px auto;
             transition: all 0.3s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
         }
         .button:hover {
             background-color: #00BB00;
-            transform: scale(1.05);
+            color: #FFFFFF;
         }
+
+        /* Animação pulse do botão */
         .botao-pulse {
+            -webkit-animation: pulse 1s ease infinite;
+            -moz-animation: pulse 1s ease infinite;
+            -ms-animation: pulse 1s ease infinite;
+            -o-animation: pulse 1s ease infinite;
             animation: pulse 1s ease infinite;
+        }
+        .botao-pulse:hover {
+            color: #fff;
+        }
+        @-webkit-keyframes pulse {
+            0% { -webkit-transform: scale(1); }
+            25% { -webkit-transform: scale(1.1); }
+            50% { -webkit-transform: scale(1); }
+            100% { -webkit-transform: scale(1); }
+        }
+        @-moz-keyframes pulse {
+            0% { -moz-transform: scale(1); }
+            25% { -moz-transform: scale(1.1); }
+            50% { -moz-transform: scale(1); }
+            100% { -moz-transform: scale(1); }
+        }
+        @-ms-keyframes pulse {
+            0% { -ms-transform: scale(1); }
+            25% { -ms-transform: scale(1.1); }
+            50% { -ms-transform: scale(1); }
+            100% { -ms-transform: scale(1); }
+        }
+        @-o-keyframes pulse {
+            0% { -o-transform: scale(1); }
+            25% { -o-transform: scale(1.1); }
+            50% { -o-transform: scale(1); }
+            100% { -o-transform: scale(1); }
         }
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
+
+        /* Faixa vermelha da garantia */
         .guarantee {
             background-color: #EB0000;
             color: #FFFFFF;
@@ -91,20 +152,28 @@
             text-align: center;
         }
         .guarantee img {
-            width: 120px;
-            margin-bottom: 20px;
+            width: 24%;
+            max-width: 200px;
+            margin: 0 auto 20px;
+            display: block;
         }
         .guarantee h2 {
+            font-family: 'Roboto', Arial, sans-serif;
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin: 20px 0 15px 0;
+            color: #FFFFFF;
         }
         .guarantee p {
+            font-family: 'Roboto', Arial, sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            max-width: 600px;
+            color: #FFFFFF;
+            max-width: 700px;
             margin: 0 auto 25px;
         }
+
+        /* Responsivo mobile */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 20px;
@@ -119,51 +188,64 @@
                 font-size: 16px;
                 padding: 15px 25px;
             }
+            .guarantee img {
+                width: 34%;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Faixa preta do topo -->
     <div class="header">
         <h1>AS INFORMAÇÕES ABAIXO SÃO CONFIDENCIAIS!<br><u><i>NÃO COMPARTILHE COM NINGUÉM!</i></u></h1>
     </div>
 
+    <!-- Conteúdo principal branco -->
     <div class="container content">
+        <div class="spacer-20"></div>
+
         <h2 class="title-red">VOCÊ FOI SELECIONADA!</h2>
 
-        <p class="text-block">
+        <h5 class="text-block">
             <span class="highlight-green">EU NÃO QUERO QUE O PREÇO SEJA UM EMPECILHO PARA VOCÊ</span> 
             ELIMINAR DE VEZ POR TODAS ATÉ 12KG EM 21 DIAS DA SUA VIDA..
-        </p>
+        </h5>
 
-        <p class="text-block">POR ISSO EU RESOLVI FAZER ALGO INÉDITO...</p>
+        <h5 class="text-block">POR ISSO EU RESOLVI FAZER ALGO INÉDITO...</h5>
 
-        <p class="text-block">
-            VOU TE DAR UM <span class="highlight-red">DESCONTO IMEDIATO DE 30% + ACESSO A TODAS AS ATUALIZAÇÕES 
+        <h5 class="text-block">
+            VOU TE DAR UM DESCONTO <span class="highlight-red">DESCONTO IMEDIATO DE 30% + ACESSO A TODAS AS ATUALIZAÇÕES 
             E MELHORIAS DO APLICATIVO LIPO AO CUBO APP PARA SEMPRE,</span> SEM PRECISAR PAGAR MENSALIDADE...
-        </p>
+        </h5>
 
-        <p class="text-block">
+        <h5 class="text-block">
             TUDO ISSO POR APENAS<br>
             <span class="highlight-green">R$67,00!</span>
-        </p>
+        </h5>
 
-        <p class="text-block">
+        <h5 class="text-block">
             MAS VOCÊ PRECISA <span class="highlight-red">AGIR AGORA</span>, POIS 
             <span class="highlight-red">SE VOCÊ NÃO ACEITAR ESSE DESCONTO NOS PRÓXIMOS 5 MINUTOS,</span> 
             O NOSSO SISTEMA IRÁ REALIZAR UM NOVO SORTEIO, E VOCÊ IRÁ PERDER A CHANCE DE ADQUIRIR O APP POR ESSE VALOR SURREAL
-        </p>
+        </h5>
 
-        <p class="text-block highlight-green-text">
+        <h5 class="text-block highlight-green-text">
             CLIQUE NO BOTÃO ABAIXO PARA GARANTIR SEU DESCONTO EXCLUSIVO:
-        </p>
+        </h5>
 
         <a href="https://pay.kirvano.com/58ae915d-c77f-4e5e-b645-467e13a12f79?aff=440bb57e-1bd8-4372-929e-4dc34356da48" class="button botao-pulse">
             CLIQUE AQUI PARA ADQUIRIR O LIPO EM CUBO APP COM 30% DESCONTO EXTRA E PAGUE R$67
         </a>
+
+        <div class="spacer-20"></div>
     </div>
 
+    <!-- Faixa vermelha da garantia -->
     <div class="guarantee">
+        <img src="http://ruscplan.online/wp-content/uploads/2024/04/10002430-removebg-preview.webp" alt="Garantia 30 dias">
+
         <h2>GARANTIA DE 30 DIAS</h2>
+
         <p>
             Nós assumimos todo o risco! Oferecemos uma<br>
             garantia de 30 dias no aplicativo <b>Lipo ao Cubo App.</b><br>
@@ -173,6 +255,7 @@
             dinheiro, com apenas alguns cliques. Essa é a<br>
             verdadeira garantia <b>RISCO ZERO!</b>
         </p>
+
         <a href="https://pay.kirvano.com/58ae915d-c77f-4e5e-b645-467e13a12f79?aff=440bb57e-1bd8-4372-929e-4dc34356da48" class="button botao-pulse">
             CLIQUE AQUI PARA ADQUIRIR O LIPO EM CUBO APP COM 30% DESCONTO EXTRA E PAGUE R$67
         </a>
